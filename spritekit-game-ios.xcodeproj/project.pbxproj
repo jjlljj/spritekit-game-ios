@@ -32,14 +32,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C1A367F245B4BA700E220C4 /* programmatic-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "programmatic-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1A367F245B4BA700E220C4 /* spritekit-game-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "spritekit-game-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1A3682245B4BA700E220C4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0C1A3684245B4BA700E220C4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0C1A368B245B4BA900E220C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0C1A368E245B4BA900E220C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0C1A3690245B4BA900E220C4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0C1A3695245B4BA900E220C4 /* programmatic-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "programmatic-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C1A36A0245B4BA900E220C4 /* programmatic-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "programmatic-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1A3695245B4BA900E220C4 /* spritekit-game-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-game-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C1A36A0245B4BA900E220C4 /* spritekit-game-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-game-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1A36B2245B4D1800E220C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,9 +79,9 @@
 		0C1A3680245B4BA700E220C4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0C1A367F245B4BA700E220C4 /* programmatic-ios.app */,
-				0C1A3695245B4BA900E220C4 /* programmatic-iosTests.xctest */,
-				0C1A36A0245B4BA900E220C4 /* programmatic-iosUITests.xctest */,
+				0C1A367F245B4BA700E220C4 /* spritekit-game-ios.app */,
+				0C1A3695245B4BA900E220C4 /* spritekit-game-iosTests.xctest */,
+				0C1A36A0245B4BA900E220C4 /* spritekit-game-iosUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,9 +102,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0C1A367E245B4BA700E220C4 /* programmatic-ios */ = {
+		0C1A367E245B4BA700E220C4 /* spritekit-game-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C1A36A9245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-ios" */;
+			buildConfigurationList = 0C1A36A9245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-ios" */;
 			buildPhases = (
 				0C1A367B245B4BA700E220C4 /* Sources */,
 				0C1A367C245B4BA700E220C4 /* Frameworks */,
@@ -114,14 +114,14 @@
 			);
 			dependencies = (
 			);
-			name = "programmatic-ios";
+			name = "spritekit-game-ios";
 			productName = "programmatic-ios";
-			productReference = 0C1A367F245B4BA700E220C4 /* programmatic-ios.app */;
+			productReference = 0C1A367F245B4BA700E220C4 /* spritekit-game-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0C1A3694245B4BA900E220C4 /* programmatic-iosTests */ = {
+		0C1A3694245B4BA900E220C4 /* spritekit-game-iosTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C1A36AC245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-iosTests" */;
+			buildConfigurationList = 0C1A36AC245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-iosTests" */;
 			buildPhases = (
 				0C1A3691245B4BA900E220C4 /* Sources */,
 				0C1A3692245B4BA900E220C4 /* Frameworks */,
@@ -132,14 +132,14 @@
 			dependencies = (
 				0C1A3697245B4BA900E220C4 /* PBXTargetDependency */,
 			);
-			name = "programmatic-iosTests";
+			name = "spritekit-game-iosTests";
 			productName = "programmatic-iosTests";
-			productReference = 0C1A3695245B4BA900E220C4 /* programmatic-iosTests.xctest */;
+			productReference = 0C1A3695245B4BA900E220C4 /* spritekit-game-iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0C1A369F245B4BA900E220C4 /* programmatic-iosUITests */ = {
+		0C1A369F245B4BA900E220C4 /* spritekit-game-iosUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0C1A36AF245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-iosUITests" */;
+			buildConfigurationList = 0C1A36AF245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-iosUITests" */;
 			buildPhases = (
 				0C1A369C245B4BA900E220C4 /* Sources */,
 				0C1A369D245B4BA900E220C4 /* Frameworks */,
@@ -150,9 +150,9 @@
 			dependencies = (
 				0C1A36A2245B4BA900E220C4 /* PBXTargetDependency */,
 			);
-			name = "programmatic-iosUITests";
+			name = "spritekit-game-iosUITests";
 			productName = "programmatic-iosUITests";
-			productReference = 0C1A36A0245B4BA900E220C4 /* programmatic-iosUITests.xctest */;
+			productReference = 0C1A36A0245B4BA900E220C4 /* spritekit-game-iosUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -178,7 +178,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0C1A367A245B4BA700E220C4 /* Build configuration list for PBXProject "programmatic-ios" */;
+			buildConfigurationList = 0C1A367A245B4BA700E220C4 /* Build configuration list for PBXProject "spritekit-game-ios" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -191,9 +191,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0C1A367E245B4BA700E220C4 /* programmatic-ios */,
-				0C1A3694245B4BA900E220C4 /* programmatic-iosTests */,
-				0C1A369F245B4BA900E220C4 /* programmatic-iosUITests */,
+				0C1A367E245B4BA700E220C4 /* spritekit-game-ios */,
+				0C1A3694245B4BA900E220C4 /* spritekit-game-iosTests */,
+				0C1A369F245B4BA900E220C4 /* spritekit-game-iosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -254,12 +254,12 @@
 /* Begin PBXTargetDependency section */
 		0C1A3697245B4BA900E220C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C1A367E245B4BA700E220C4 /* programmatic-ios */;
+			target = 0C1A367E245B4BA700E220C4 /* spritekit-game-ios */;
 			targetProxy = 0C1A3696245B4BA900E220C4 /* PBXContainerItemProxy */;
 		};
 		0C1A36A2245B4BA900E220C4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0C1A367E245B4BA700E220C4 /* programmatic-ios */;
+			target = 0C1A367E245B4BA700E220C4 /* spritekit-game-ios */;
 			targetProxy = 0C1A36A1245B4BA900E220C4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -441,7 +441,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/programmatic-ios.app/programmatic-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-game-ios.app/spritekit-game-ios";
 			};
 			name = Debug;
 		};
@@ -462,7 +462,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/programmatic-ios.app/programmatic-ios";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spritekit-game-ios.app/spritekit-game-ios";
 			};
 			name = Release;
 		};
@@ -507,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0C1A367A245B4BA700E220C4 /* Build configuration list for PBXProject "programmatic-ios" */ = {
+		0C1A367A245B4BA700E220C4 /* Build configuration list for PBXProject "spritekit-game-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C1A36A7245B4BA900E220C4 /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C1A36A9245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-ios" */ = {
+		0C1A36A9245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C1A36AA245B4BA900E220C4 /* Debug */,
@@ -525,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C1A36AC245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-iosTests" */ = {
+		0C1A36AC245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-iosTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C1A36AD245B4BA900E220C4 /* Debug */,
@@ -534,7 +534,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0C1A36AF245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "programmatic-iosUITests" */ = {
+		0C1A36AF245B4BA900E220C4 /* Build configuration list for PBXNativeTarget "spritekit-game-iosUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0C1A36B0245B4BA900E220C4 /* Debug */,
