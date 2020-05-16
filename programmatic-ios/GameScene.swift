@@ -92,37 +92,6 @@ class GameScene: SKScene {
     monster.run(SKAction.sequence([actionMove, actionMoveDone]))
   }
   
-//   func addMonster() {
-//      let monster = SKSpriteNode(color: UIColor.red, size: CGSize(width:30, height:30))
-//      
-//      let actualY = random(min: monster.size.height/2, max: size.height - monster.size.height/2)
-//      //let actualX = random(min: monster.size.width/2, max: size.width - monster.size.width/2)
-//
-//      
-//      monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
-//      
-//      addChild(monster)
-//      
-//      let actualDuration = random(min: CGFloat(4.0), max: CGFloat(6.0))
-//      
-//      let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width/2, y: actualY), duration: TimeInterval(actualDuration))
-//      
-//  //    let actualX = random(min: monster.size.width/2, max: size.width - monster.size.width/2)
-//  //
-//  //    //monster.position = CGPoint(x: size.width + monster.size.width/2, y: actualY)
-//  //    monster.position = CGPoint(x: actualX, y: size.height + monster.size.height/2)
-//  //
-//  //    addChild(monster)
-//  //
-//  //    let actualDuration = random(min: CGFloat(4.0), max: CGFloat(6.0))
-//  //
-//  //    let actionMove = SKAction.move(to: CGPoint(x: actualX, y: -monster.size.height/2), duration: TimeInterval(actualDuration))
-//      
-//      
-//      let actionMoveDone = SKAction.removeFromParent()
-//      monster.run(SKAction.sequence([actionMove, actionMoveDone]))
-//    }
-  
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
     guard let touch = touches.first else {
       return
@@ -136,7 +105,7 @@ class GameScene: SKScene {
     
     let offset = touchLocation - projectile.position
     
-    if offset.y < 0 { return }
+    if offset.y < 100 { return }
     
     addChild(projectile)
     
