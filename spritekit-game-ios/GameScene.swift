@@ -55,7 +55,6 @@ class GameScene: SKScene {
   override func didMove(to view: SKView) {
     super.didMove(to:view)
 
-
     let background = SKSpriteNode(imageNamed: "bg")
     background.position = CGPoint(x: size.width/2, y: size.height/2)
     background.size = CGSize(width: size.width, height: size.height)
@@ -117,7 +116,8 @@ class GameScene: SKScene {
     let touchLocation = touch.location(in: self)
     
     let projectile = SKSpriteNode(color: UIColor.red, size: CGSize(width:3, height:12))
-    projectile.position = player.position
+    projectile.position = CGPoint(x: player.position.x, y: player.position.y + player.size.height/2)
+    
     
     projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
     projectile.physicsBody?.isDynamic = true
