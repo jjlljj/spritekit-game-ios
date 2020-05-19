@@ -54,7 +54,12 @@ class GameScene: SKScene {
   
   override func didMove(to view: SKView) {
     super.didMove(to:view)
-    backgroundColor = SKColor.white
+
+
+    let background = SKSpriteNode(imageNamed: "bg")
+    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    background.size = CGSize(width: size.width, height: size.height)
+    addChild(background)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
