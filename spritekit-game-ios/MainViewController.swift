@@ -17,11 +17,6 @@ class MainViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-//    
-//    let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-//    backgroundImage.image = UIImage(named: "bg.png")
-//    backgroundImage.contentMode = UIView.ContentMode.scaleAspectFill
-//    view.insertSubview(backgroundImage, at: 0)
 
     let scene = GameScene(size: UIScreen.main.bounds.size)
     NSLog("scene size = \(UIScreen.main.bounds.size)")
