@@ -13,6 +13,7 @@
 		0C1A368C245B4BA900E220C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A368B245B4BA900E220C4 /* Assets.xcassets */; };
 		0C1A368F245B4BA900E220C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A368D245B4BA900E220C4 /* LaunchScreen.storyboard */; };
 		0C1A36B3245B4D1800E220C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A36B2245B4D1800E220C4 /* MainViewController.swift */; };
+		0C1A38CF2476268200EB39CF /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A38CE2476268200EB39CF /* GameOverScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		0C1A3695245B4BA900E220C4 /* spritekit-game-iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-game-iosTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1A36A0245B4BA900E220C4 /* spritekit-game-iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "spritekit-game-iosUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C1A36B2245B4D1800E220C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0C1A38CE2476268200EB39CF /* GameOverScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				0C1A36B2245B4D1800E220C4 /* MainViewController.swift */,
+				0C1A38CE2476268200EB39CF /* GameOverScene.swift */,
 				0C1A3682245B4BA700E220C4 /* AppDelegate.swift */,
 				0C1A3684245B4BA700E220C4 /* SceneDelegate.swift */,
 				0C1A368B245B4BA900E220C4 /* Assets.xcassets */,
@@ -232,6 +235,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C1A38CF2476268200EB39CF /* GameOverScene.swift in Sources */,
 				0C1A36B3245B4D1800E220C4 /* MainViewController.swift in Sources */,
 				0C1A3683245B4BA700E220C4 /* AppDelegate.swift in Sources */,
 				0C19E2E4246F5853008C9CA6 /* GameScene.swift in Sources */,

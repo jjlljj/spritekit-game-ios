@@ -81,6 +81,8 @@ class GameScene: SKScene {
     player.physicsBody?.collisionBitMask = PhysicsCategory.none
     addChild(player)
     
+    
+
     run(SKAction.repeatForever(
       SKAction.sequence([
         SKAction.run(addAsteroid),
@@ -120,6 +122,7 @@ class GameScene: SKScene {
     
     let actionMove = SKAction.move(to: CGPoint(x: actualX, y: -asteroid.size.height/2), duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
+    
     asteroid.run(SKAction.sequence([actionMove, actionMoveDone]))
   }
   
@@ -169,8 +172,18 @@ class GameScene: SKScene {
   func asteroidDidCollideWithPlayer(asteroid: SKSpriteNode, player: SKSpriteNode) {
     print("Player Hit")
     label.text = "Game Over"
+    
+    let loseAction = SKAction.run() { [weak self] in
+      guard let `self` = self else { return }
+      let reveal = SKTransition.flipHorizontal(withDuration: 0.5)
+      let gameOverScene = GameOverScene(size: self.size, won: false)
+      self.view?.presentScene(gameOverScene, transition: reveal)
+    }
+   
     asteroid.removeFromParent()
     player.removeFromParent()
+    
+    run(loseAction)
   }
 }
 
