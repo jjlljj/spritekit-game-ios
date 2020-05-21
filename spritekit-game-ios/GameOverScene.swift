@@ -22,7 +22,7 @@ class GameOverScene: SKScene {
     addChild(label)
 
     run(SKAction.sequence([
-      SKAction.wait(forDuration: 5.0),
+      SKAction.wait(forDuration: 3.5),
       SKAction.run() { [weak self] in
         // 5
         guard let `self` = self else { return }
