@@ -51,14 +51,24 @@ class GameScene: SKScene {
   
   //let player = SKSpriteNode(color: UIColor.blue, size: CGSize(width:20, height:40))
   let player = SKSpriteNode(imageNamed: "spaceship.png")
+  let label = SKLabelNode(fontNamed: "Chalkduster")
+  var asteroidsDestroyed = 0
+  var asteroidsHit = 0
+  var score = 0
   
   override func didMove(to view: SKView) {
     super.didMove(to:view)
-
-    let background = SKSpriteNode(imageNamed: "bg")
-    background.position = CGPoint(x: size.width/2, y: size.height/2)
-    background.size = CGSize(width: size.width, height: size.height)
-    addChild(background)
+    
+    //    let background = SKSpriteNode(imageNamed: "bg")
+    //    background.position = CGPoint(x: size.width/2, y: size.height/2)
+    //    background.size = CGSize(width: size.width, height: size.height)
+    //    addChild(background)
+    
+    label.text = "Score: \(score)"
+    label.fontSize = 16
+    label.fontColor = SKColor.white
+    label.position = CGPoint(x: 60, y: size.height - 60)
+    addChild(label)
     
     physicsWorld.gravity = .zero
     physicsWorld.contactDelegate = self
@@ -144,6 +154,9 @@ class GameScene: SKScene {
   
   func projectileDidCollideWithAsteroid(projectile: SKSpriteNode, asteroid: SKSpriteNode) {
     print("Hit")
+    asteroidsDestroyed += 1
+    score += 20
+    label.text = "Score: \(score)"
     projectile.removeFromParent()
     asteroid.removeFromParent()
   }
@@ -160,9 +173,9 @@ extension GameScene: SKPhysicsContactDelegate {
       firstBody = contact.bodyB
       secondBody = contact.bodyA
     }
-   
+    
     if ((firstBody.categoryBitMask & PhysicsCategory.asteroid != 0) &&
-        (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
+      (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
       if let asteroid = firstBody.node as? SKSpriteNode,
         let projectile = secondBody.node as? SKSpriteNode {
         projectileDidCollideWithAsteroid(projectile: projectile, asteroid: asteroid)

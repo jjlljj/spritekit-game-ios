@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
     let skView = view as! SKView
     skView.showsFPS = true
     skView.showsNodeCount = true
-    //skView.ignoresSiblingOrder = true
+    skView.ignoresSiblingOrder = true
     scene.scaleMode = .resizeFill
     skView.presentScene(scene)
   }
