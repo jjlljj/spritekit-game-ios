@@ -13,6 +13,7 @@ struct PhysicsCategory {
   static let all       : UInt32 = UInt32.max
   static let asteroid   : UInt32 = 0b1
   static let projectile: UInt32 = 0b10
+  static let player: UInt32 = 0b11
 }
 
 func +(left: CGPoint, right: CGPoint) -> CGPoint {
@@ -49,7 +50,6 @@ extension CGPoint {
 
 class GameScene: SKScene {
   
-  //let player = SKSpriteNode(color: UIColor.blue, size: CGSize(width:20, height:40))
   let player = SKSpriteNode(imageNamed: "spaceship.png")
   let label = SKLabelNode(fontNamed: "Chalkduster")
   var asteroidsDestroyed = 0
@@ -74,6 +74,11 @@ class GameScene: SKScene {
     physicsWorld.contactDelegate = self
     
     player.position = CGPoint(x: size.width * 0.5, y: size.height * 0.1)
+    player.physicsBody = SKPhysicsBody(rectangleOf: player.size)
+    player.physicsBody?.isDynamic = true
+    player.physicsBody?.categoryBitMask = PhysicsCategory.player
+    player.physicsBody?.contactTestBitMask = PhysicsCategory.asteroid
+    player.physicsBody?.collisionBitMask = PhysicsCategory.none
     addChild(player)
     
     run(SKAction.repeatForever(
@@ -160,6 +165,13 @@ class GameScene: SKScene {
     projectile.removeFromParent()
     asteroid.removeFromParent()
   }
+  
+  func asteroidDidCollideWithPlayer(asteroid: SKSpriteNode, player: SKSpriteNode) {
+    print("Player Hit")
+    label.text = "Game Over"
+    asteroid.removeFromParent()
+    player.removeFromParent()
+  }
 }
 
 extension GameScene: SKPhysicsContactDelegate {
@@ -174,6 +186,15 @@ extension GameScene: SKPhysicsContactDelegate {
       secondBody = contact.bodyA
     }
     
+    if ((firstBody.categoryBitMask == PhysicsCategory.asteroid) &&
+      (secondBody.categoryBitMask == PhysicsCategory.player)) {
+      
+      if let asteroid = firstBody.node as? SKSpriteNode,
+        let player = secondBody.node as? SKSpriteNode {
+        return asteroidDidCollideWithPlayer(asteroid: asteroid, player: player)
+      }
+    }
+    
     if ((firstBody.categoryBitMask & PhysicsCategory.asteroid != 0) &&
       (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
       if let asteroid = firstBody.node as? SKSpriteNode,
@@ -181,5 +202,6 @@ extension GameScene: SKPhysicsContactDelegate {
         projectileDidCollideWithAsteroid(projectile: projectile, asteroid: asteroid)
       }
     }
+
   }
 }
