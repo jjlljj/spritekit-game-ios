@@ -14,6 +14,7 @@ struct PhysicsCategory {
   static let asteroid   : UInt32 = 0b1
   static let projectile: UInt32 = 0b10
   static let player: UInt32 = 0b11
+  static let bomber: UInt32 = 94
 }
 
 func +(left: CGPoint, right: CGPoint) -> CGPoint {
@@ -59,11 +60,6 @@ class GameScene: SKScene {
   override func didMove(to view: SKView) {
     super.didMove(to:view)
     
-    //    let background = SKSpriteNode(imageNamed: "bg")
-    //    background.position = CGPoint(x: size.width/2, y: size.height/2)
-    //    background.size = CGSize(width: size.width, height: size.height)
-    //    addChild(background)
-    
     label.text = "Score: \(score)"
     label.fontSize = 16
     label.fontColor = SKColor.white
@@ -102,6 +98,16 @@ class GameScene: SKScene {
   
   func random(min: CGFloat, max: CGFloat) -> CGFloat {
     return random() * (max - min) + min
+  }
+  
+  func addBomber() {
+    let bomber = SKSpriteNode(imageNamed: "asteroid.png")
+    bomber.physicsBody = SKPhysicsBody(rectangleOf: bomber.size)
+    bomber.physicsBody?.isDynamic = true
+    bomber.physicsBody?.categoryBitMask = PhysicsCategory.bomber
+    bomber.physicsBody?.contactTestBitMask = PhysicsCategory.player
+    bomber.physicsBody?.collisionBitMask = PhysicsCategory.none
+    
   }
   
   func addAsteroid() {
